@@ -53,3 +53,10 @@ app.route('/', (req,res)=>{
     res.setHeader('content-type','application/json');
     res.setHeader('content-type','text/json');
 })
+
+
+//we can send multiple responses by this way 
+    res.write("Hello");
+    res.write("Hello Hi");
+    res.write("Hello Hi, how are you ??");
+    res.end(JSON.stringify(data));

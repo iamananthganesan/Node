@@ -1,0 +1,28 @@
+Event loop in Node js
+
+Basically we will request and we will receive the response 
+
+The requestes will go to the event queue it might have many requests that formed as queue
+where: Queue FIFO
+
+Event Loop: 
+    Event loop used to contineously check wheather we will have a requests in event queue or what if so
+    Event loop will check its an non blocking or blocking request
+    Lets say if its non blocking request(Async request) response will send to the user 
+    Lets day if its blocking request(Sync request) Thred pool will created, its nothing but a pool of workers a worker will assign to the request, once its processed or done the response will send to the user          
+
+    Why Express?
+
+    in Node its hard to maintain the code 
+
+    http.createServer((req, res)=>{
+        switch(req.method){
+            case GET:
+                res.end("response for the GET call");
+            case POST:
+                res.end("response for the POST call");
+        }
+    })
+
+    To avoid these many lines of code we can go for framework Express
+    
